@@ -1,7 +1,7 @@
-const Signup = () => {
+const Login = () => {
   return(
       <p>This is a singup page.</p>
   );
 }
 
-export default Signup;
+export default Login;
