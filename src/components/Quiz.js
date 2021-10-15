@@ -8,7 +8,7 @@ import React from "react";
 const Quiz = () => {
     const SIZE = questions.length;
     const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [showFinalScore, setShowFinalScore] = useState(false);
+    const [finish, setFinish] = useState(false);
     const [score, setScore] = useState(0);
 
     const updateAnswerOnClick = (isCorrect) => {
@@ -20,7 +20,7 @@ const Quiz = () => {
         if (getNextQuestion < questions.length) {
             setCurrentQuestion(getNextQuestion);
         } else {
-            setShowFinalScore(true);
+            setFinish(true);
         }
     };
 
@@ -39,7 +39,7 @@ const Quiz = () => {
         shuffle(questions);
     }, []);
 
-    if (showFinalScore) {
+    if (finish) {
         return (
             <div>
                 You scored {score} out of {SIZE}
