@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 
-const Login = () => {
+const Login = (props) => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -15,6 +15,8 @@ const Login = () => {
         console.log(customers);
         if (found) {
           console.log(found);
+          localStorage.setItem('customer', username);
+          props.onCustomerLoggedIn();
           history.push({pathname: '/', state: {username: username}});
         }
     }

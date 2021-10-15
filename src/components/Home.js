@@ -1,12 +1,12 @@
-import { useLocation } from "react-router-dom";
-import { useState } from 'react';
+//import { useLocation } from "react-router-dom";
+//import { useState } from 'react';
 import { Card, Container } from 'react-bootstrap';
 import flowers from "../data";
 
 const Home = () => {
 
-    const [username] = useState('');
-    const location = useLocation();
+    //const [username] = useState('');
+    //const location = useLocation();
 
     let flowerGrid = flowers.map(flower => (
         <Card style={{ width: '18rem' }}>

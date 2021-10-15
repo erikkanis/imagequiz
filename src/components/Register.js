@@ -5,7 +5,7 @@ import customers from '../communication/customers';
 const Register = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    console.log("Hello");
+    //console.log("Hello");
     let saveCustomer = (e) => {
         e.preventDefault();
         customers.push({username: username, password: password});
