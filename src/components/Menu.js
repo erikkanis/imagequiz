@@ -42,20 +42,5 @@ const Menu = () => {
         </Navbar>
     );
 }
-/*
-<Container>
-<Navbar.Brand href="/">Practicum</Navbar.Brand>
-<Navbar.Toggle />
-<Navbar.Collapse className="justify-content-end">
-<Nav.Link href="/login">Log In</Nav.Link>
-<Nav.Link href="/register">Sign Up</Nav.Link>
-{(localStorage.getItem('customer')) ?
-    <Navbar.Text>
-        Signed in as: <a href="/login">{localStorage.getItem('customer')}</a>
-    </Navbar.Text>
-: ''}
-</Navbar.Collapse>
-</Container>
-*/
 
 export default Menu;

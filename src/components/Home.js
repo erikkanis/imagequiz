@@ -2,6 +2,7 @@
 //import { useState } from 'react';
 import { Card, Container } from 'react-bootstrap';
 import flowers from "../data";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -9,12 +10,14 @@ const Home = () => {
     //const location = useLocation();
 
     let flowerGrid = flowers.map(flower => (
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={flower.picture} />
-            <Card.Body>
-                <Card.Title>{flower.name}</Card.Title>
-            </Card.Body>
-        </Card>
+        <Link to={"/quiz"} >
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={flower.picture} />
+                <Card.Body>
+                    <Card.Title>{flower.name}</Card.Title>
+                </Card.Body>
+            </Card>
+        </Link>
     ));
 
     return (
